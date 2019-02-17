@@ -1,0 +1,52 @@
+﻿@model CartIndexViewModel
+
+<h2>Your basket</h2>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Amount</th>
+            <th>Product</th>
+            <th class="text-right">Price</th>
+            <th class="text-right">Sum</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var line in Model.Cart.Lines)
+        {
+            <tr>
+                <td class="text-center">@line.Amount</td>
+                <td class="text-left">@line.Product.Name</td>
+                <td class="text-right">@line.Product.Price$</td>
+                <td class="text-right">
+                    @((line.Amount * line.Product.Price))$
+                </td>
+                <td>
+                    <form asp-action="RemoveFromCart" method="post">
+                        <input type="hidden" name="ProductID"
+                               value="@line.Product.ProductID" />
+                        <input type="hidden" name="returnUrl"
+                               value="@Model.ReturnUrl" />
+                        <button type="submit" class="btn btn-sm btn-danger">
+                            Delete
+                        </button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3" class="text-right">Summary:</td>
+            <td class="text-right">
+                @Model.Cart.ComputeTotalValue()$
+            </td>
+        </tr>
+    </tfoot>
+</table>
+
+<div class="text-center">
+    <a class="btn btn-primary" href="@Model.ReturnUrl">Continue shopping</a>
+    <a class="btn btn-primary" asp-action="Checkout" asp-controller="Order">
+        Make an order
+    </a>
+</div>

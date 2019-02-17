@@ -1,0 +1,24 @@
+﻿@model Product
+
+<div class="container marginTop">
+    <div class="row">
+        <div class="card">
+            <div class="text-center view overlay hm-white-slight">
+                <img src="@Model.ImgUrl"  alt="" style="width: 100px; height: 100px;">
+                <a href="#">
+                    <div class="mask waves-effect waves-light"></div>
+                </a>
+            </div>
+            <div class="card-block">
+                <!--Title-->
+                <h4 class="card-title">@Model.Name</h4>
+                <!--Text-->
+                <p class="card-text">@Model.Description.</p>
+                <p class="btn btn-group pull-right">
+                    <a asp-controller="Product" asp-action="List" class="btn btn-default">Show all products</a>
+                    <a class="btn btn-success" style="padding: 5px; margin-top: 10px; font-size: 15px" href="#"><strong>Add to buy</strong></a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Design;
+using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.Extensions.DependencyInjection;
+using SportShop.Models;
+
+namespace SportsStore.Models
+{
+    public class ApplicationDbContext : DbContext
+    {
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext>
+            options) : base(options) { }
+
+        public DbSet<Product> Products { get; set; }
+    }
+}

@@ -1,0 +1,11 @@
+C:\Users\Sebastian\source\repos\SportShop\SportShop\bin\Debug\netcoreapp2.0\SportShop.deps.json
+C:\Users\Sebastian\source\repos\SportShop\SportShop\bin\Debug\netcoreapp2.0\SportShop.runtimeconfig.json
+C:\Users\Sebastian\source\repos\SportShop\SportShop\bin\Debug\netcoreapp2.0\SportShop.runtimeconfig.dev.json
+C:\Users\Sebastian\source\repos\SportShop\SportShop\bin\Debug\netcoreapp2.0\SportShop.dll
+C:\Users\Sebastian\source\repos\SportShop\SportShop\bin\Debug\netcoreapp2.0\SportShop.pdb
+C:\Users\Sebastian\source\repos\SportShop\SportShop\obj\Debug\netcoreapp2.0\SportShop.csprojAssemblyReference.cache
+C:\Users\Sebastian\source\repos\SportShop\SportShop\obj\Debug\netcoreapp2.0\SportShop.csproj.CoreCompileInputs.cache
+C:\Users\Sebastian\source\repos\SportShop\SportShop\obj\Debug\netcoreapp2.0\SportShop.AssemblyInfoInputs.cache
+C:\Users\Sebastian\source\repos\SportShop\SportShop\obj\Debug\netcoreapp2.0\SportShop.AssemblyInfo.cs
+C:\Users\Sebastian\source\repos\SportShop\SportShop\obj\Debug\netcoreapp2.0\SportShop.dll
+C:\Users\Sebastian\source\repos\SportShop\SportShop\obj\Debug\netcoreapp2.0\SportShop.pdb

@@ -1,0 +1,27 @@
+﻿@model Product
+
+<div class="col-md-3" style="margin-top:20px;">
+    <div class="card">
+        <div class="card-block" style="padding: 5px;">
+            <img src="@Model.ImgUrl" alt="picture" class="img-fluid" style="object-fit: cover; " />
+            <div class="card-title">
+                <a asp-controller="Product" asp-action="Details" asp-route-productId="@Model.ProductID"><h4>@Model.Name</h4></a>
+            </div>
+            <div class="card-text">@Model.Description</div>
+            <span class="badge badge-pill badge-primary text-center" style="position: absolute; margin-top:15px; margin-left:10px;">
+                <m>@Model.Price$</m>
+            </span>
+            <form id="@Model.ProductID" asp-action="AddToCart"
+                  asp-controller="Cart" method="post">
+                <input type="hidden" asp-for="ProductID" />
+                <input type="hidden" name="returnUrl" value="@ViewContext.HttpContext.Request.PathAndQuery()"/>
+                <span class="card-text p-1">
+                    <button type="submit"
+                            class="btn btn-success btn-sm pull-right" style="float:right">
+                        Add to buy
+                    </button>
+                </span>
+            </form>
+        </div>
+    </div>
+</div>
